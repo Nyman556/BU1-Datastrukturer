@@ -6,7 +6,8 @@ class Program
     {
         
         // Övning1();
-        Övning3();
+        // Övning3();
+        Övning4();
         static void Övning1() 
         {
             List<string> lista = new List<string>();
@@ -37,6 +38,22 @@ class Program
            string resultString = string.Join(", ", resultList);
 
             Console.WriteLine($"Jämna nummer i listan: {resultString}");
+        }
+
+        static void Övning4() 
+        {
+           string? input = Console.ReadLine();
+           string[] inputArr = input.Split(" ");
+           List<int> resultList = new List<int>();
+           foreach(string numberStr in inputArr) {
+             if (int.TryParse(numberStr, out int number))
+                {
+                    resultList.Add(number * 2);
+                }
+           }
+           string resultString = string.Join(", ", resultList);
+
+            Console.WriteLine(resultString);
         }
     }
 }
